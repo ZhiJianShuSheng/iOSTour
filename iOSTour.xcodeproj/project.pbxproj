@@ -181,6 +181,10 @@
 		29FEE77B1ECED1E200C81B60 /* MBHUD_Warn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29FEE7731ECED1E200C81B60 /* MBHUD_Warn@2x.png */; };
 		29FEE77C1ECED1E200C81B60 /* MBHUD_Warn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29FEE7741ECED1E200C81B60 /* MBHUD_Warn@3x.png */; };
 		503EA3194DEF4CE9959B495C /* Pods_iOSTour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4A0170E98DCC2DF75808E4 /* Pods_iOSTour.framework */; };
+		DA191DB623FC089F007BC7A6 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA191DB523FC089F007BC7A6 /* SocketManager.m */; };
+		DA191DB923FC0957007BC7A6 /* SpeedDectectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA191DB823FC0957007BC7A6 /* SpeedDectectManager.m */; };
+		DA191DBC23FC096E007BC7A6 /* ServerURLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA191DBB23FC096E007BC7A6 /* ServerURLModel.m */; };
+		DA191DBF23FC0BD1007BC7A6 /* TCPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DA191DBE23FC0BD1007BC7A6 /* TCPAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -451,6 +455,14 @@
 		29FEE7741ECED1E200C81B60 /* MBHUD_Warn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MBHUD_Warn@3x.png"; sourceTree = "<group>"; };
 		5E4A0170E98DCC2DF75808E4 /* Pods_iOSTour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51AB222BA7ACF202B5B1330 /* Pods-iOSTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTour/Pods-iOSTour.debug.xcconfig"; sourceTree = "<group>"; };
+		DA191DB423FC089F007BC7A6 /* SocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
+		DA191DB523FC089F007BC7A6 /* SocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
+		DA191DB723FC0957007BC7A6 /* SpeedDectectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeedDectectManager.h; sourceTree = "<group>"; };
+		DA191DB823FC0957007BC7A6 /* SpeedDectectManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedDectectManager.m; sourceTree = "<group>"; };
+		DA191DBA23FC096E007BC7A6 /* ServerURLModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerURLModel.h; sourceTree = "<group>"; };
+		DA191DBB23FC096E007BC7A6 /* ServerURLModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerURLModel.m; sourceTree = "<group>"; };
+		DA191DBD23FC0BD1007BC7A6 /* TCPAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPAPI.h; sourceTree = "<group>"; };
+		DA191DBE23FC0BD1007BC7A6 /* TCPAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPAPI.m; sourceTree = "<group>"; };
 		FF2C9E014B38A7AAF79ADE0D /* Pods-iOSTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTour/Pods-iOSTour.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -654,6 +666,7 @@
 		293D45A81ECD6926007C64A9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				DA191DB323FC0887007BC7A6 /* Socket */,
 				290DE9241ED19B7F00A45FF6 /* AppManager.h */,
 				290DE9251ED19B7F00A45FF6 /* AppManager.m */,
 				293ECC2B1EE56D1D008061A1 /* IMManager.h */,
@@ -1452,6 +1465,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA191DB323FC0887007BC7A6 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				DA191DB423FC089F007BC7A6 /* SocketManager.h */,
+				DA191DB523FC089F007BC7A6 /* SocketManager.m */,
+				DA191DB723FC0957007BC7A6 /* SpeedDectectManager.h */,
+				DA191DB823FC0957007BC7A6 /* SpeedDectectManager.m */,
+				DA191DBA23FC096E007BC7A6 /* ServerURLModel.h */,
+				DA191DBB23FC096E007BC7A6 /* ServerURLModel.m */,
+				DA191DBD23FC0BD1007BC7A6 /* TCPAPI.h */,
+				DA191DBE23FC0BD1007BC7A6 /* TCPAPI.m */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1482,7 +1510,7 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "徐阳";
+				ORGANIZATIONNAME = Wesly;
 				TargetAttributes = {
 					296F9EB71ECC64CE0063A255 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -1718,6 +1746,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA191DBF23FC0BD1007BC7A6 /* TCPAPI.m in Sources */,
 				2917D2111EE0268A00E76185 /* UIViewController+AlertViewAndActionSheet.m in Sources */,
 				29629EF01F78E669002CFCBD /* XLWebViewController.m in Sources */,
 				296DEA6F1F5D50D100C6FD00 /* TAAbstractDotView.m in Sources */,
@@ -1754,9 +1783,12 @@
 				29CF33331F14B62A00DB7507 /* LoginLogic.m in Sources */,
 				290471B91F98D9AB0081CCA1 /* XYTabBar.m in Sources */,
 				296DEA731F5D50D100C6FD00 /* SDCollectionViewCell.m in Sources */,
+				DA191DBC23FC096E007BC7A6 /* ServerURLModel.m in Sources */,
 				29CF33301F14B60800DB7507 /* MineLogic.m in Sources */,
+				DA191DB623FC089F007BC7A6 /* SocketManager.m in Sources */,
 				296DEA741F5D50D100C6FD00 /* SDCycleScrollView.m in Sources */,
 				2917D2141EE02CF100E76185 /* UIButton+XYButton.m in Sources */,
+				DA191DB923FC0957007BC7A6 /* SpeedDectectManager.m in Sources */,
 				29CF332D1F14B5EA00DB7507 /* MsgLogic.m in Sources */,
 				2914E48A1F20A462001C01DB /* PersonModel.m in Sources */,
 				29CD2C6E1F30229B00A0F5DC /* CellModel.m in Sources */,
