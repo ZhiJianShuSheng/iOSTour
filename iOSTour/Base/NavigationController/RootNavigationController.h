@@ -11,7 +11,7 @@
 /**
  导航控制器基类
  */
-@interface RootNavigationController : RTRootNavigationController
+@interface RootNavigationController : UINavigationController
 
 /*!
  *  返回到指定的类视图

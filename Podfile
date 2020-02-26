@@ -53,4 +53,7 @@ target 'iOSTour' do
 
   # #Security
   pod 'CocoaSecurity'
+  
+  # Business
+  pod 'XHLaunchAd'
 end

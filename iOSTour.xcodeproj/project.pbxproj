@@ -185,6 +185,8 @@
 		DA191DB923FC0957007BC7A6 /* SpeedDectectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA191DB823FC0957007BC7A6 /* SpeedDectectManager.m */; };
 		DA191DBC23FC096E007BC7A6 /* ServerURLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA191DBB23FC096E007BC7A6 /* ServerURLModel.m */; };
 		DA191DBF23FC0BD1007BC7A6 /* TCPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DA191DBE23FC0BD1007BC7A6 /* TCPAPI.m */; };
+		DA50E429240613CF00BFA990 /* WE_AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E428240613CF00BFA990 /* WE_AdManager.m */; };
+		DA50E42C2406144D00BFA990 /* WE_AdDisplayConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E42B2406144D00BFA990 /* WE_AdDisplayConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -455,6 +457,7 @@
 		29FEE7741ECED1E200C81B60 /* MBHUD_Warn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MBHUD_Warn@3x.png"; sourceTree = "<group>"; };
 		5E4A0170E98DCC2DF75808E4 /* Pods_iOSTour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51AB222BA7ACF202B5B1330 /* Pods-iOSTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTour/Pods-iOSTour.debug.xcconfig"; sourceTree = "<group>"; };
+		DA17B01E23FD0A6E00D990A7 /* iOSTour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSTour.entitlements; sourceTree = "<group>"; };
 		DA191DB423FC089F007BC7A6 /* SocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
 		DA191DB523FC089F007BC7A6 /* SocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
 		DA191DB723FC0957007BC7A6 /* SpeedDectectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeedDectectManager.h; sourceTree = "<group>"; };
@@ -463,6 +466,10 @@
 		DA191DBB23FC096E007BC7A6 /* ServerURLModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerURLModel.m; sourceTree = "<group>"; };
 		DA191DBD23FC0BD1007BC7A6 /* TCPAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPAPI.h; sourceTree = "<group>"; };
 		DA191DBE23FC0BD1007BC7A6 /* TCPAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPAPI.m; sourceTree = "<group>"; };
+		DA50E427240613CF00BFA990 /* WE_AdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_AdManager.h; sourceTree = "<group>"; };
+		DA50E428240613CF00BFA990 /* WE_AdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_AdManager.m; sourceTree = "<group>"; };
+		DA50E42A2406144D00BFA990 /* WE_AdDisplayConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_AdDisplayConfig.h; sourceTree = "<group>"; };
+		DA50E42B2406144D00BFA990 /* WE_AdDisplayConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_AdDisplayConfig.m; sourceTree = "<group>"; };
 		FF2C9E014B38A7AAF79ADE0D /* Pods-iOSTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTour/Pods-iOSTour.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -666,7 +673,8 @@
 		293D45A81ECD6926007C64A9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				DA191DB323FC0887007BC7A6 /* Socket */,
+				DA50E426240613A200BFA990 /* AdManager */,
+				DA191DB323FC0887007BC7A6 /* SocketManager */,
 				290DE9241ED19B7F00A45FF6 /* AppManager.h */,
 				290DE9251ED19B7F00A45FF6 /* AppManager.m */,
 				293ECC2B1EE56D1D008061A1 /* IMManager.h */,
@@ -1258,6 +1266,7 @@
 		296F9EBA1ECC64CE0063A255 /* iOSTour */ = {
 			isa = PBXGroup;
 			children = (
+				DA17B01E23FD0A6E00D990A7 /* iOSTour.entitlements */,
 				29AD6C5D1ED3E4D600B0879C /* AppDelegate */,
 				293D45A91ECD6926007C64A9 /* Modules */,
 				293D45A81ECD6926007C64A9 /* Manager */,
@@ -1465,7 +1474,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DA191DB323FC0887007BC7A6 /* Socket */ = {
+		DA191DB323FC0887007BC7A6 /* SocketManager */ = {
 			isa = PBXGroup;
 			children = (
 				DA191DB423FC089F007BC7A6 /* SocketManager.h */,
@@ -1477,7 +1486,18 @@
 				DA191DBD23FC0BD1007BC7A6 /* TCPAPI.h */,
 				DA191DBE23FC0BD1007BC7A6 /* TCPAPI.m */,
 			);
-			path = Socket;
+			path = SocketManager;
+			sourceTree = "<group>";
+		};
+		DA50E426240613A200BFA990 /* AdManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA50E427240613CF00BFA990 /* WE_AdManager.h */,
+				DA50E428240613CF00BFA990 /* WE_AdManager.m */,
+				DA50E42A2406144D00BFA990 /* WE_AdDisplayConfig.h */,
+				DA50E42B2406144D00BFA990 /* WE_AdDisplayConfig.m */,
+			);
+			path = AdManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1508,13 +1528,13 @@
 		296F9EB01ECC64CE0063A255 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = "";
+				CLASSPREFIX = WE_;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Wesly;
 				TargetAttributes = {
 					296F9EB71ECC64CE0063A255 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = J2RG2C4TQQ;
+						DevelopmentTeam = J8C48TWX42;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 1;
@@ -1672,6 +1692,7 @@
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/JKCategories/JKCategories.framework",
 				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
@@ -1689,6 +1710,7 @@
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
+				"${BUILT_PRODUCTS_DIR}/XHLaunchAd/XHLaunchAd.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ZBarSDK/ZBarSDK.framework",
@@ -1709,6 +1731,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKCategories.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
@@ -1726,6 +1749,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XHLaunchAd.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZBarSDK.framework",
@@ -1751,7 +1775,9 @@
 				29629EF01F78E669002CFCBD /* XLWebViewController.m in Sources */,
 				296DEA6F1F5D50D100C6FD00 /* TAAbstractDotView.m in Sources */,
 				290DE9231ED19B6B00A45FF6 /* AESCipher.m in Sources */,
+				DA50E42C2406144D00BFA990 /* WE_AdDisplayConfig.m in Sources */,
 				293D45A41ECD6422007C64A9 /* main.m in Sources */,
+				DA50E429240613CF00BFA990 /* WE_AdManager.m in Sources */,
 				29AD6C631ED3E4D600B0879C /* AppDelegate.m in Sources */,
 				290471B81F98D9A80081CCA1 /* UITabBar+CustomBadge.m in Sources */,
 				29CF332A1F14B5CC00DB7507 /* MakeFriendsLogic.m in Sources */,
@@ -1944,7 +1970,8 @@
 			baseConfigurationReference = FF2C9E014B38A7AAF79ADE0D /* Pods-iOSTour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J2RG2C4TQQ;
+				CODE_SIGN_ENTITLEMENTS = iOSTour/iOSTour.entitlements;
+				DEVELOPMENT_TEAM = J8C48TWX42;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1961,7 +1988,7 @@
 					"$(PROJECT_DIR)/iOSTour/ThridParty/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/iOSTour/ThridParty/UMSocial/UMSocialSDKPlugin",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hi.wesly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Instaza.BaBa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/iOSTour/Define";
@@ -1973,8 +2000,10 @@
 			baseConfigurationReference = 07E9FE500115E84F37516E7A /* Pods-iOSTour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = iOSTour/iOSTour.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8C48TWX42;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1991,7 +2020,7 @@
 					"$(PROJECT_DIR)/iOSTour/ThridParty/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/iOSTour/ThridParty/UMSocial/UMSocialSDKPlugin",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hi.wesly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Instaza.BaBa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;

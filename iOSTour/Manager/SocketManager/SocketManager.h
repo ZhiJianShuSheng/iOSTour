@@ -11,7 +11,7 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
-
+NS_ASSUME_NONNULL_END
 @protocol SocketManagerDelegate <NSObject>
 
 - (void)socket:(GCDAsyncSocket *)socket didReadData:(NSData *)data;
@@ -37,4 +37,4 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-NS_ASSUME_NONNULL_END
+
