@@ -11,7 +11,13 @@
 @implementation WE_AdManager
 
 + (void)showBannerAdWithConfig:(WE_AdDisplayConfig *)config {
+    if (config.adType == WE_AdGoogleType) {
+        
+    }
     
+    if (config.adType == WE_AdFaceBookType) {
+        
+    }
 }
 
 + (void)showFullSceenAdWithConfig:(WE_AdDisplayConfig *)config {

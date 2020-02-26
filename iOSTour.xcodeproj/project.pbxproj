@@ -187,6 +187,9 @@
 		DA191DBF23FC0BD1007BC7A6 /* TCPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DA191DBE23FC0BD1007BC7A6 /* TCPAPI.m */; };
 		DA50E429240613CF00BFA990 /* WE_AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E428240613CF00BFA990 /* WE_AdManager.m */; };
 		DA50E42C2406144D00BFA990 /* WE_AdDisplayConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E42B2406144D00BFA990 /* WE_AdDisplayConfig.m */; };
+		DA50E42F24068F5C00BFA990 /* WE_AdDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E42E24068F5C00BFA990 /* WE_AdDelegateObject.m */; };
+		DA50E43A2406944300BFA990 /* WE_LaunchAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E4382406944300BFA990 /* WE_LaunchAdManager.m */; };
+		DA50E43B2406944300BFA990 /* WE_LaunchAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E4392406944300BFA990 /* WE_LaunchAdModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -470,6 +473,12 @@
 		DA50E428240613CF00BFA990 /* WE_AdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_AdManager.m; sourceTree = "<group>"; };
 		DA50E42A2406144D00BFA990 /* WE_AdDisplayConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_AdDisplayConfig.h; sourceTree = "<group>"; };
 		DA50E42B2406144D00BFA990 /* WE_AdDisplayConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_AdDisplayConfig.m; sourceTree = "<group>"; };
+		DA50E42D24068F5C00BFA990 /* WE_AdDelegateObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_AdDelegateObject.h; sourceTree = "<group>"; };
+		DA50E42E24068F5C00BFA990 /* WE_AdDelegateObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_AdDelegateObject.m; sourceTree = "<group>"; };
+		DA50E4362406944300BFA990 /* WE_LaunchAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WE_LaunchAdModel.h; sourceTree = "<group>"; };
+		DA50E4372406944300BFA990 /* WE_LaunchAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WE_LaunchAdManager.h; sourceTree = "<group>"; };
+		DA50E4382406944300BFA990 /* WE_LaunchAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WE_LaunchAdManager.m; sourceTree = "<group>"; };
+		DA50E4392406944300BFA990 /* WE_LaunchAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WE_LaunchAdModel.m; sourceTree = "<group>"; };
 		FF2C9E014B38A7AAF79ADE0D /* Pods-iOSTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTour/Pods-iOSTour.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1492,10 +1501,16 @@
 		DA50E426240613A200BFA990 /* AdManager */ = {
 			isa = PBXGroup;
 			children = (
+				DA50E4372406944300BFA990 /* WE_LaunchAdManager.h */,
+				DA50E4382406944300BFA990 /* WE_LaunchAdManager.m */,
+				DA50E4362406944300BFA990 /* WE_LaunchAdModel.h */,
+				DA50E4392406944300BFA990 /* WE_LaunchAdModel.m */,
 				DA50E427240613CF00BFA990 /* WE_AdManager.h */,
 				DA50E428240613CF00BFA990 /* WE_AdManager.m */,
 				DA50E42A2406144D00BFA990 /* WE_AdDisplayConfig.h */,
 				DA50E42B2406144D00BFA990 /* WE_AdDisplayConfig.m */,
+				DA50E42D24068F5C00BFA990 /* WE_AdDelegateObject.h */,
+				DA50E42E24068F5C00BFA990 /* WE_AdDelegateObject.m */,
 			);
 			path = AdManager;
 			sourceTree = "<group>";
@@ -1694,6 +1709,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JKCategories/JKCategories.framework",
 				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
 				"${BUILT_PRODUCTS_DIR}/LBXScan/LBXScan.framework",
@@ -1717,6 +1733,7 @@
 				"${BUILT_PRODUCTS_DIR}/ZLPhotoBrowser/ZLPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/ZipArchive/ZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1733,6 +1750,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKCategories.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBXScan.framework",
@@ -1756,6 +1774,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libextobjc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1770,6 +1789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA50E42F24068F5C00BFA990 /* WE_AdDelegateObject.m in Sources */,
 				DA191DBF23FC0BD1007BC7A6 /* TCPAPI.m in Sources */,
 				2917D2111EE0268A00E76185 /* UIViewController+AlertViewAndActionSheet.m in Sources */,
 				29629EF01F78E669002CFCBD /* XLWebViewController.m in Sources */,
@@ -1782,6 +1802,7 @@
 				290471B81F98D9A80081CCA1 /* UITabBar+CustomBadge.m in Sources */,
 				29CF332A1F14B5CC00DB7507 /* MakeFriendsLogic.m in Sources */,
 				2917D1FF1EDFC89A00E76185 /* YYFPSLabel.m in Sources */,
+				DA50E43A2406944300BFA990 /* WE_LaunchAdManager.m in Sources */,
 				29AD6C621ED3E4D600B0879C /* AppDelegate+AppService.m in Sources */,
 				296DEA701F5D50D100C6FD00 /* TAAnimatedDotView.m in Sources */,
 				293D46051ECDAA02007C64A9 /* RootNavigationController.m in Sources */,
@@ -1855,6 +1876,7 @@
 				29AD6C5A1ED3E28800B0879C /* HeaderModel.m in Sources */,
 				293D45FA1ECDA4D8007C64A9 /* RootWebViewController.m in Sources */,
 				296DEA751F5D50D100C6FD00 /* UIView+SDExtension.m in Sources */,
+				DA50E43B2406944300BFA990 /* WE_LaunchAdModel.m in Sources */,
 				29D3C0091F4D11A200FD3914 /* FFTagsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

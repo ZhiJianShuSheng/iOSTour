@@ -56,4 +56,5 @@ target 'iOSTour' do
   
   # Business
   pod 'XHLaunchAd'
+  pod 'Google-Mobile-Ads-SDK'
 end
